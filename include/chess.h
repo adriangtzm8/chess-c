@@ -15,8 +15,14 @@ typedef struct {
     int turn;
 } Board;
 
+typedef struct {
+    int x;
+    int y;
+} BoardPos;
+
 void initBoard(Board* board);
 void printPiece(Piece piece);
 void printBoard(Board* board);
+void movePiece(Board* board, BoardPos start, BoardPos end);
 
 #endif // CHESS_H

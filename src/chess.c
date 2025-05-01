@@ -47,3 +47,8 @@ void printBoard(Board* board) {
         printf("\n");
     }
 }
+
+void movePiece(Board* board, BoardPos start, BoardPos end) {
+    board->board[end.x][end.y] = board->board[start.x][start.y];
+    board->board[start.x][start.y] = EMPTY;
+}
